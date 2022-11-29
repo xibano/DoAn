@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang-="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1147679ae7.js"></script>
+    <link rel="stylesheet" href="css\style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Xemchitiet.css">
+    <title>Xem chi tiết sản phẩm</title>
+  </head>
+  <body>
+
+
+    <!--Bắt đầu từ đây-->
+    <h2 style="margin: 20px 0 10px 0">CHI TIẾT SẢN PHẨM</h2>
+    <div class="row">
+      <div class="card col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3" style="border: none">
+          <a href="Chitietsanpham.html"><img src="./img/product/ao1.jpg" class="card-img-top" alt="...">
+            <a href="Ao.html" class="text-light">
+              <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="edit item">
+                  <i class="fas fa-cog"></i>
+              </button>
+          </a>
+          </a>
+          <div class="card-body">
+          </div>
+      </div>
+
+      <div class="col-12 col-sm-4 col-md-2 col-lg-2 col-xl-1" style="border: none" >
+          <a class="card" style="height: 25%;" href="Chitietsanpham.html">
+            <img src="./img/product/ao2.jpg" class="card-img-top" alt="...">
+              <a href="Ao.html" class="text-light">
+                <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="edit item">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </a>
+            </a>
+
+            <a href="Trangchu.html" class="text-light">
+              <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
+                  <i class="fas fa-trash"></i>
+              </button>
+            </a>
+          </a>
+          <a  class="card" style="height: 25%;" href="Chitietsanpham.html"><img src="./img/product/ao3.jpg" class="card-img-top" alt="...">
+            <a href="Ao.html" class="text-light">
+              <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="edit item">
+                  <i class="fas fa-cog"></i>
+              </button>
+          </a>
+
+          <a href="Trangchu.html" class="text-light">
+            <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
+                <i class="fas fa-trash"></i>
+            </button>
+          </a>
+
+          </a>
+          <a  class="card" style="height: 25%;" href="Chitietsanpham.html"><img src="./img/product/ao4.jpg" class="card-img-top" alt="...">
+            <a href="Ao.html" class="text-light">
+              <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="edit item">
+                  <i class="fas fa-cog"></i>
+              </button>
+          </a>
+
+          <a href="Trangchu.html" class="text-light">
+            <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
+                <i class="fas fa-trash"></i>
+            </button>
+          </a>
+
+        </a>
+
+        <!--Nút thêm ảnh bên phải-->
+        <a href="Ao.html" class="text-light">
+         
+            <button type="button" class="btn btn-success btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="edit item">
+              <i class="fas fa-plus"></i>
+              Thêm ảnh
+            </button>
+
+      </a>
+
+      </div>
+
+      
+      <script>
+            function modifyTenSanPham() {
+              var tensp = document.getElementById('tensanpham').innerHTML;
+             
+              document.getElementById('tensanpham').innerHTML = "<input type='text' id='tensp' value='" + tensp + "'>";
+              
+              document.getElementById("btn_tensanpham").onclick = saveTenSanPham;
+              document.getElementById("btn_tensanpham").innerHTML =  `<i class="fas fa-plus"></i>`;
+            }
+
+            function saveTenSanPham() {
+              var tensp = document.getElementById('tensp').value;
+              document.getElementById('tensanpham').innerHTML = tensp;
+              document.getElementById("btn_tensanpham").onclick = modifyTenSanPham;
+              document.getElementById("btn_tensanpham").innerHTML =  `<i class="fas fa-cog"></i>`;
+            }
+          </script>
+
+      <div class="col-12 col-sm-12 col-md-5 col-lg-6 col-xl-8" style="border: none" >
+        <p class="fs-3 fw-bolder"><span id="tensanpham">ÁO THUN 1</span>
+          <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="edit item" id="btn_tensanpham"
+          onClick="modifyTenSanPham()">
+              <i class="fas fa-cog"></i>
+          </button>
+
+        
+                
+        </p>
+        <div class="mb-3 row">
+          <p class="col-sm-2 col-form-label">Giá:</p>
+          <div class="mt-2 col-sm-10">
+           250.000 VNĐ
+           <a href="Ao.html" class="text-light">
+                <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="edit item">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <p class="col-sm-2 col-form-label">Màu sắc:</p>
+          <div class="mt-2 col-sm-10">
+           Xanh lá
+           <a href="Ao.html" class="text-light">
+            <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="edit item">
+                <i class="fas fa-cog"></i>
+            </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="staticEmail" class="col-sm-2 col-form-label">Size:</label>
+          <div class="col-sm-10">
+            <div class=" mt-1 row">
+              <div class="pb-2 col-2">
+                <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">-->
+                <label class="" for="inlineRadio1">S</label>
+                <input class="w-50" type="number" min="0" value="0">
+              </div>
+
+              <div class="pb-2  col-2">
+                <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">-->
+                <label class="" for="inlineRadio2">M</label>
+                <input class="w-50" type="number" min="0" value="0">
+              </div>
+              <div class="pb-2  col-2">
+                <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2">-->
+                <label class="" for="inlineRadio3">L</label>
+                <input class="w-50" type="number" min="0" value="0">
+              </div>
+              <div class="pb-2 col-2">
+                <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option2">-->
+                <label class="" for="inlineRadio4">XL</label>
+                <input class="w-50" type="number" min="0" value="0">
+              </div>
+              <div class="pb-2 col-2">
+                <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option2">-->
+                <label class="" for="inlineRadio5">XXL</label>
+                <input class=" w-50" type="number" min="0" value="0">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="staticEmail" class="col-sm-2 col-form-label">Số lượng:</label>
+          <div class="col-sm-10">
+            <div class=" mt-1">
+              
+                <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">-->
+                
+                <input class="w-50" type="number" min="0" value="0">
+            </div>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="staticEmail" class="col-sm-2 col-form-label">Giới tính:</label>
+          <div class="mt-2 col-sm-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">Nam</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Nữ</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="staticsanpham" class="col-sm-2 col-form-label">Loại sản phẩm:</label>
+          <div class="mt-2 col-sm-10">
+            <select name="loaisanpham" id="staticsanpham">
+              <option value="aothun">Áo thun</option>
+              <option value="aosomi">Áo sơ mi</option>
+              <option value="aopolo">Áo polo</option>
+              <option value="quanjeans">Quần jeans</option>
+              <option value="quantay">Quần tây</option>
+              <option value="quanloe">Quần ống loe</option>
+              <option value="bo">Set đồ</option>
+              <option value="cavat">Cà vạt</option>
+              <option value="thatlung">Thắt lưng</option>
+              <option value="kinhram">Kính râm</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+       
+      
+      </div>
+      <button type="button" class="btn btn-success btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="edit item">
+        <i class="fas fa-plus"></i>
+        Thêm mô tả
+      </button>
+      <h2>Chi tiết 
+            <a href="Ao.html" class="text-light">
+                <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="edit item">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </a>
+
+            <a href="Trangchu.html" class="text-light">
+                <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </a>
+
+      </h2>
+
+      
+                        <p>Áo thun nam cổ tròn, tay ngắn. Trang trí hình và chữ sinh động mặt trước. Dáng áo suông cơ bản.</p> <br>
+
+                        <p>Chất liệu thun cao cấp cùng thiết kế bắt mắt, mang đến cho bạn nam sự trẻ trung, năng động nhưng cũng không kém phần hiện đại. Bên cạnh đó, sản phẩm với gam màu trung tính, 
+                        giúp bạn nam dễ phối cùng các phụ kiện khác làm tăng thêm sự sành điệu trong phong cách thời trang của mình. <br></p>
+                        
+                        <p>Màu sắc: Cam - Xanh Lơ - Xanh Cổ Vịt Nhạt </p>
+              
+
+      <h2 style="margin-top: 30px">Cách bảo quản
+        <a href="Ao.html" class="text-light">
+            <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="edit item">
+                <i class="fas fa-cog"></i>
+            </button>
+        </a>
+
+        <a href="Trangchu.html" class="text-light">
+            <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
+                <i class="fas fa-trash"></i>
+            </button>
+        </a>
+
+        </h2>         
+
+                        <p>* Vải dệt kim : sau khi giặt sản phẩm phải được phơi ngang tránh bai dãn. <br> </p>
+                        
+                        <p>* Vải voan , lụa , chiffon nên giặt bằng tay. <br></p>
+                        
+                        <p>* Vải thô , tuytsy , kaki không có phối hay trang trí đá cườm thì có thể giặt máy. <br></p>
+                        
+                        <p>* Vải thô , tuytsy, kaki có phối màu tường phản hay trang trí voan , lụa , đá cườm thì cần giặt tay. <br></p>
+                        
+                        <p>* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans.Nếu giặt thì nên lộn trái sản phẩm khi giặt , đóng khuy , kéo khóa, không nên giặt chung cùng đồ sáng màu , tránh dính màu vào các sản phẩm khác. <br></p>
+                        
+                        <p>* Các sản phẩm cần được giặt ngay không ngâm tránh bị loang màu , phân biệt màu và loại vải để tránh trường hợp vải phai. Không nên giặt sản phẩm với xà phòng có chất tẩy mạnh , nên giặt cùng xà phòng pha loãng. <br></p>
+                        
+                        <p>* Các sản phẩm có thể giặt bằng máy thì chỉ nên để chế độ giặt nhẹ , vắt mức trung bình và nên phân các loại sản phẩm cùng màu và cùng loại vải khi giặt. <br></p>
+                        
+                        <p>* Nên phơi sản phẩm tại chỗ thoáng mát , tránh ánh nắng trực tiếp sẽ dễ bị phai bạc màu , nên làm khô quần áo bằng cách phơi ở những điểm gió sẽ giữ màu vải tốt hơn. <br></p>
+                        
+                        <p>* Những chất vải 100% cotton , không nên phơi sản phẩm bằng mắc áo mà nên vắt ngang sản phẩm lên dây phơi để tránh tình trạng rạn vải. <br></p>
+                        
+                        <p>* Khi ủi sản phẩm bằng bàn là và sử dụng chế độ hơi nước sẽ làm cho sản phẩm dễ ủi phẳng , mát và không bị cháy , giữ màu sản phẩm được đẹp và bền lâu hơn. Nhiệt độ của bàn là tùy theo từng loại vải. <br></p>
+              
+    </div>
+
+
+
+  </div>
+        
+    
+  </body>
+</html>
